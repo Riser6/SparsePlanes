@@ -71,13 +71,21 @@ def annotations_to_instances(
         BoxMode.convert(obj["bbox"], BoxMode(obj["bbox_mode"]), BoxMode.XYXY_ABS)
         for obj in annos
     ]
+    """print("boxes:")
+    print(type(boxes))  #<class 'list'>
+    print(boxes)"""
     target = Instances(image_size)
     boxes = target.gt_boxes = Boxes(boxes)
     boxes.clip(image_size)
 
     classes = [obj["category_id"] for obj in annos]
+    """print("classes:")
+    print(type(classes))    #<class 'list'>
+    print(classes)"""       #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     classes = torch.tensor(classes, dtype=torch.int64)
     target.gt_classes = classes
+
+    mask_format = "bitmask"
 
     if len(annos) and "segmentation" in annos[0]:
         segms = [obj["segmentation"] for obj in annos]
@@ -107,6 +115,10 @@ def annotations_to_instances(
                         "as a 2D ndarray.".format(type(segm))
                     )
             # torch.from_numpy does not support array with negative stride.
+            """print("masks:")
+            print(torch.stack([torch.from_numpy(np.ascontiguousarray(x)) for x in masks]).shape)    #torch.Size([14, 480, 640])
+            print(torch.stack([torch.from_numpy(np.ascontiguousarray(x)) for x in masks]))"""
+
             masks = BitMasks(
                 torch.stack([torch.from_numpy(np.ascontiguousarray(x)) for x in masks])
             )
@@ -136,8 +148,8 @@ class PlaneRCNNMapper:
         self.depth_on       = cfg.MODEL.DEPTH_ON
         self.camera_on      = cfg.MODEL.CAMERA_ON
         self.load_proposals = cfg.MODEL.LOAD_PROPOSALS
-        self._eval_gt_box = cfg.TEST.EVAL_GT_BOX
-        self._augmentation = cfg.DATALOADER.AUGMENTATION
+        self._eval_gt_box   = cfg.TEST.EVAL_GT_BOX
+        self._augmentation  = cfg.DATALOADER.AUGMENTATION
         # fmt: on
 
         if self.load_proposals:
@@ -180,12 +192,14 @@ class PlaneRCNNMapper:
                 2. Transform the image and annotations
                 3. Prepare the annotations to :class:`Instances`
         """
-
         dataset_dict = copy.deepcopy(dataset_dict)
+        """print("dataset items:")
+        print(dataset_dict)"""
         for i in range(2):
             image = utils.read_image(
-                dataset_dict[str(i)]["file_name"], format=self.img_format
+                dataset_dict[str(i)]["file_name"].replace('/Pool1/users/jinlinyi/dataset', './datasets'), format=self.img_format
             )
+
             utils.check_image_size(dataset_dict[str(i)], image)
             if self.is_train and self._augmentation:
                 image = Image.fromarray(image)
@@ -206,7 +220,7 @@ class PlaneRCNNMapper:
                     # load depth map
                     house, img_id = dataset_dict[str(i)]["image_id"].split("_", 1)
                     depth_path = os.path.join(
-                        "/Pool1/users/jinlinyi/dataset/mp3d_rpnet_v4_sep20/observations",
+                        "./datasets/mp3d_rpnet_v4_sep20/observations",
                         house,
                         img_id + ".pkl",
                     )
@@ -258,7 +272,8 @@ class PlaneRCNNMapper:
                     dataset_dict[str(i)]["instances"] = instances[
                         instances.gt_boxes.nonempty()
                     ]
-
+        """print("dataloader items:")
+        print(dataset_dict['0']['instances'])"""
         return dataset_dict
 
     def transform_annotations(self, annotation, transforms=None, image_size=None):

@@ -1,0 +1,146 @@
+newmtl refined_uv_plane_0
+map_Kd uv_maps/refined_uv_plane_0.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_1
+map_Kd uv_maps/refined_uv_plane_1.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_2
+map_Kd uv_maps/refined_uv_plane_2.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_3
+map_Kd uv_maps/refined_uv_plane_3.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_4
+map_Kd uv_maps/refined_uv_plane_4.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_5
+map_Kd uv_maps/refined_uv_plane_5.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_6
+map_Kd uv_maps/refined_uv_plane_6.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_7
+map_Kd uv_maps/refined_uv_plane_7.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_8
+map_Kd uv_maps/refined_uv_plane_8.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_9
+map_Kd uv_maps/refined_uv_plane_9.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_10
+map_Kd uv_maps/refined_uv_plane_10.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_11
+map_Kd uv_maps/refined_uv_plane_11.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_12
+map_Kd uv_maps/refined_uv_plane_12.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_13
+map_Kd uv_maps/refined_uv_plane_13.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_14
+map_Kd uv_maps/refined_uv_plane_14.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_15
+map_Kd uv_maps/refined_uv_plane_15.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_16
+map_Kd uv_maps/refined_uv_plane_16.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_17
+map_Kd uv_maps/refined_uv_plane_17.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_18
+map_Kd uv_maps/refined_uv_plane_18.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl refined_uv_plane_19
+map_Kd uv_maps/refined_uv_plane_19.png
+# Test colors
+Ka 1.000 1.000 1.000  # white
+Kd 1.000 1.000 1.000  # white
+Ks 0.000 0.000 0.000  # black
+Ns 10.0
+newmtl color_0
+Kd 0.10196000337600708 0.3215700089931488 1.0
+Ka 0.000 0.000 0.000
+newmtl color_1
+Kd 1.0 0.06669999659061432 0.14900000393390656
+Ka 0.000 0.000 0.000

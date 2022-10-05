@@ -102,6 +102,7 @@ class SiamesePlaneRCNN(nn.Module):
                 The :class:`Instances` object has the following keys:
                 "pred_boxes", "pred_classes", "scores", "pred_masks", "pred_keypoints"
         """
+
         if not self.training:
             return self.inference(batched_inputs)
 
@@ -148,7 +149,7 @@ class SiamesePlaneRCNN(nn.Module):
             gt_instances = [x["targets"].to(self.device) for x in batched_inputs]
         else:
             gt_instances = None
-
+        
         features = self.backbone(images.tensor)
 
         if self.proposal_generator:
